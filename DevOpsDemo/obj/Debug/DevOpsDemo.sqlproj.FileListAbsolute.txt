@@ -1,0 +1,9 @@
+/Users/btspendo/Projects/projects/DevOpsDemo/bin/Debug/DevOpsDemo.dacpac
+/Users/btspendo/Projects/projects/DevOpsDemo/bin/Debug/DevOpsDemo.dll
+/Users/btspendo/Projects/projects/DevOpsDemo/bin/Debug/DevOpsDemo.pdb
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/Model.xml
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/refactor.xml
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/postdeploy.sql
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/predeploy.sql
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/DevOpsDemo.dll
+/Users/btspendo/Projects/projects/DevOpsDemo/obj/Debug/DevOpsDemo.pdb

@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/btspendo/Projects/projects/DevOpsDemo/DevOpsDemo.sqlproj": {}
+  },
+  "projects": {
+    "/Users/btspendo/Projects/projects/DevOpsDemo/DevOpsDemo.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/btspendo/Projects/projects/DevOpsDemo/DevOpsDemo.sqlproj",
+        "projectName": "DevOpsDemo",
+        "projectPath": "/Users/btspendo/Projects/projects/DevOpsDemo/DevOpsDemo.sqlproj",
+        "packagesPath": "/Users/btspendo/.nuget/packages/",
+        "outputPath": "/Users/btspendo/Projects/projects/DevOpsDemo/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/btspendo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net46"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net46": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

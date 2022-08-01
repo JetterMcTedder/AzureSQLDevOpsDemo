@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.1.3-preview" />
+  <PropertyGroup>
+    <Name>DevOpsDemo</Name>
+    <ProjectGuid>{E20E956C-614C-4829-91B6-786D22D6482C}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Tables\" />
+    <Folder Include="Person\Views\" />
+    <Folder Include="Person\Views\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="dbo\DataTypes\" />
+    <Folder Include="Person\XmlSchemaCollections\" />
+    <Folder Include="Person\XmlSchemaCollections\" />
+    <Folder Include="Person\Schemas\" />
+  </ItemGroup>
+</Project>
