@@ -35,5 +35,6 @@
     <Folder Include="Person\XmlSchemaCollections\" />
     <Folder Include="Person\XmlSchemaCollections\" />
     <Folder Include="Person\Schemas\" />
+    <Folder Include="Person\Tables\" />
   </ItemGroup>
 </Project>
