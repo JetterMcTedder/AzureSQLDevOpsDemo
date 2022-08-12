@@ -37,6 +37,7 @@
     <Folder Include="Person\Schemas\" />
     <Folder Include="Person\Tables\" />
     <Folder Include="pre\tsqltsetup\" />
+<<<<<<< HEAD
     <Folder Include="post\" />
   </ItemGroup>
   <ItemGroup>
@@ -44,5 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="post\Script.PostDeployment1.sql" />
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="pre\tsqltsetup\tSQLt.class.sql" />
+>>>>>>> 42b6766575ed38847dd991edc8c3e78e0cc14750
   </ItemGroup>
 </Project>
