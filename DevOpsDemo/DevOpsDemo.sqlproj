@@ -36,5 +36,9 @@
     <Folder Include="Person\XmlSchemaCollections\" />
     <Folder Include="Person\Schemas\" />
     <Folder Include="Person\Tables\" />
+    <Folder Include="tsqlt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="tsqlt\tSQLt.class.sql" />
   </ItemGroup>
 </Project>
