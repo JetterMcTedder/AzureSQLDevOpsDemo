@@ -49,11 +49,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="tests\" />
+    <Folder Include="tsqlt\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo.ExampleTable.sql" />
     <Build Include="dbo.ExampleProcedure.sql" />
     <Build Include="dbo.CalculateDiscount.sql" />
+    <Build Include="tests\createTests.sql" />
   </ItemGroup>
   <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
@@ -62,4 +65,13 @@
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
+  <ItemGroup>
+    <None Include="tsqlt\tSQLt.class.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="tsqlt\tSQLt.2019.dacpac">
+      <HintPath>tsqlt\tSQLt.2019.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+    </ArtifactReference>
+  </ItemGroup>
 </Project>
