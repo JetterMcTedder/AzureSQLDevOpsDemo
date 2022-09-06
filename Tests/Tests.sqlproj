@@ -10,7 +10,4 @@
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
-  <ItemGroup>
-    <Build Remove="createTests.sql" />
-  </ItemGroup>
 </Project>
