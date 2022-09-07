@@ -19,7 +19,7 @@ GO
 RECONFIGURE;
 GO
 
-EXEC sp_configure 'clr enabled', 1
+EXEC sp_configure 'clr enabled', 0
  go
  RECONFIGURE
  go
