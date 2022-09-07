@@ -45,7 +45,7 @@ jobs:
       - uses: azure/sql-action@v1.3
         with:
           connection-string: "Server=localhost;Initial Catalog=contoso-insurance;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          project-file: './sql/build2022.sqlproj' # the SQLproj file
+          project-file: './Code/Code.sqlproj' # the SQLproj file
       
       - name: run a query
         run: |
