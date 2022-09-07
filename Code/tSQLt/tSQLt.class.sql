@@ -14,19 +14,6 @@
    limitations under the License.
 */
 
-sp_configure 'show advanced options', 1;
-GO
-RECONFIGURE;
-GO
-
-EXEC sp_configure 'clr enabled', 0
- go
- RECONFIGURE
- go
-EXEC sp_configure 'clr enabled'
- go
-
-
 DECLARE @Msg NVARCHAR(MAX);SELECT @Msg = 'Installed at '+CONVERT(NVARCHAR,GETDATE(),121);RAISERROR(@Msg,0,1);
 GO
 
