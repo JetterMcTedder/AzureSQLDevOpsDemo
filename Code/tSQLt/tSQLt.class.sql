@@ -14,11 +14,11 @@
    limitations under the License.
 */
 
-EXEC sp_configure 'show advanced options', 1;
+sp_configure 'show advanced options', 1;
 RECONFIGURE;
 GO
 
-EXEC sp_configure 'clr strict security', 0;
+sp_configure 'clr strict security', 0;
 RECONFIGURE;
 GO
 
