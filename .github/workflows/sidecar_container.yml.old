@@ -10,10 +10,10 @@ jobs:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
 
-    # service/sidecar container for azure-sql-2022
+    # service/sidecar container for azure-sql-edge
     services:
       mssql:
-        image: mcr.microsoft.com/mssql/server:2022-latest
+        image: mcr.microsoft.com/azure-sql-edge:latest
         env:
           ACCEPT_EULA: 1
           SA_PASSWORD: P@ssw0rd
