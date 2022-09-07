@@ -13,12 +13,6 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-EXEC sp_configure 'show advanced options', 1;
-RECONFIGURE;
-GO
-EXEC sp_configure 'clr strict security', 1;
-RECONFIGURE;
-GO
 
 DECLARE @Msg NVARCHAR(MAX);SELECT @Msg = 'Installed at '+CONVERT(NVARCHAR,GETDATE(),121);RAISERROR(@Msg,0,1);
 GO
