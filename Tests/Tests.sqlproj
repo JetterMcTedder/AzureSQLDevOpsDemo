@@ -15,4 +15,22 @@
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tsqlt" />
+    <Folder Include="myTests" />
+  </ItemGroup>  
+  <ItemGroup>
+    <Build Remove="Run_tSQLt.sql" />
+    <Build Remove="tsqlt\tSQLt.class.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="tsqlt\tSQLt.2019.dacpac">
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DeployToDatabase>False</DeployToDatabase>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="myTests\dbo_CalculateDiscountTests.sql" />    
+    <Build Include="myTests\dbo_ExampleProcedureTests.sql" />
+  </ItemGroup>  
 </Project>
