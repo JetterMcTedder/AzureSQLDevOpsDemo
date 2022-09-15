@@ -56,7 +56,12 @@ jobs:
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           project-file: './Tests/Tests.sqlproj' # the SQLproj file
-          
+
+      - name: prepDB
+        run: |
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -i './Tests/tsqlt/tSQLt.class.sql'
+
+
       - name: run a query
         run: |
           sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "exec testFinancialApp.[test that Report gets sales data with converted currency]"
