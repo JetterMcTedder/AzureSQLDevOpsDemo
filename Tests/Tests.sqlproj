@@ -16,19 +16,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Build Include="myTests\dbo_CalculateDiscountTests.sql" />
-    <Build Include="myTests\dbo_ExampleProcedureTests.sql" />
+    <Build Include="myTests\demoTest.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PreDeploy Include="tsqlt\tSQLt.class.sql" />
+    <PostDeploy Include="tsqlt\demoExec.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="tsqlt\Run_tSQLt.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <ArtifactReference Include="tsqlt\tSQLt.2019.dacpac">
+    <ArtifactReference Include="tsqlt\tSQLt.AzureSQL.dacpac">
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
-      <DeployToDatabase>False</DeployToDatabase>
     </ArtifactReference>
   </ItemGroup>
 </Project>

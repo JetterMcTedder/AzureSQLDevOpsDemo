@@ -10,4 +10,17 @@
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
+  <ItemGroup>
+    <Folder Include="FinancialApp\Tables\" />
+    <Folder Include="FinancialApp\Tables\" />
+    <Folder Include="FinancialApp\Tables\" />
+    <Folder Include="FinancialApp\Tables\" />
+    <Folder Include="FinancialApp\Procedures\" />
+    <Folder Include="FinancialApp\Procedures\" />
+    <Folder Include="FinancialApp\Procedures\" />
+    <Folder Include="FinancialApp\TableValuedFunctions\" />
+    <Folder Include="FinancialApp\TableValuedFunctions\" />
+    <Folder Include="FinancialApp\ScalarFunctions\" />
+    <Folder Include="FinancialApp\Schemas\" />
+  </ItemGroup>
 </Project>
