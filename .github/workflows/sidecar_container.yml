@@ -46,6 +46,10 @@ jobs:
           sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "create database test123;"
           sleep 10
 
+      - name: Avengers Assemble
+        run: |
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "EXEC sp_configure 'clr strict security', 0; RECONFIGURE; "
+
       # deploy the sql project
       - uses: azure/sql-action@v1.3
         with:
