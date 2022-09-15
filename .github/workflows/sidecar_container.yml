@@ -46,7 +46,12 @@ jobs:
         with:
           connection-string: "Server=localhost;Initial Catalog=contoso-insurance;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           project-file: './Code/Code.sqlproj' # the SQLproj file
-      
+
+      - uses: azure/sql-action@v1.3
+        with:
+          connection-string: "Server=localhost;Initial Catalog=contoso-insurance;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          project-file: './Tests/Tests.sqlproj' # the SQLproj file
+          
       - name: run a query
         run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d contoso-insurance -Q "SELECT MonthCode, MonthName, Year, Month, CSAT from reporting.CSATByMonth for json auto"
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d contoso-insurance -Q "EXEC tSQLt.Run 'testFinancialApp';"
