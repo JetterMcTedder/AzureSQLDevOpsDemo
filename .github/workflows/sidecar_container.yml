@@ -58,4 +58,4 @@ jobs:
           
       - name: run a query
         run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC tSQLt.Run 'testFinancialApp';"
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC [tSQLt].[Run] 'testFinancialApp';"
