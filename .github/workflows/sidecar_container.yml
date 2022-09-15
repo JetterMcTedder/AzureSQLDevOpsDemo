@@ -48,7 +48,7 @@ jobs:
 
       - name: Avengers Assemble
         run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "EXEC sp_configure 'show advanced option', '1';EXEC sp_configure 'clr strict security', 0; RECONFIGURE; "
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "EXEC sp_configure 'show advanced option', '1'; RECONFIGURE; EXEC sp_configure 'clr strict security', 0; RECONFIGURE; "
 
       # deploy the sql project
       - uses: azure/sql-action@v1.3
