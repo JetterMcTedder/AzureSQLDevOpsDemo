@@ -62,6 +62,11 @@ jobs:
           project-file: './Tests/Tests.sqlproj' # the SQLproj file
           dacpac-package: './Tests/tsqlt/tSQLt.AzureSQL.dacpac'
 
+      - uses: azure/sql-action@v1.3
+        with:
+          connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          project-file: './Tests/Tests.sqlproj' # the SQLproj file
+
       - name: run the tests
         run: |
           sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC tSQLt.Run 'testFinancialApp';"
