@@ -16,10 +16,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Build Include="myTests\demoTest.sql" />
+    <Build Remove="tsqlt\demoExec.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="tsqlt\demoExec.sql" />
+    <PostDeploy Include="myTests\demoTest.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="tsqlt\tSQLt.AzureSQL.dacpac">
