@@ -41,17 +41,21 @@ jobs:
           done
           set -o pipefail -e
 
+      - name: create an empty DB
+        run: |
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "create database test123;"
+
       # deploy the sql project
       - uses: azure/sql-action@v1.3
         with:
-          connection-string: "Server=localhost;Initial Catalog=contoso-insurance;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           project-file: './Code/Code.sqlproj' # the SQLproj file
 
       - uses: azure/sql-action@v1.3
         with:
-          connection-string: "Server=localhost;Initial Catalog=contoso-insurance;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           project-file: './Tests/Tests.sqlproj' # the SQLproj file
           
       - name: run a query
         run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d contoso-insurance -Q "EXEC tSQLt.Run 'testFinancialApp';"
+          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC tSQLt.Run 'testFinancialApp';"
