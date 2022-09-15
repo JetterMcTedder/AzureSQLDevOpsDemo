@@ -56,20 +56,8 @@ jobs:
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           project-file: './Tests/Tests.sqlproj' # the SQLproj file
+          dacpac-package: './Tests/tsqlt/tSQLt.AzureSQL.dacpac'
 
-      - name: prepDB
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -i './Tests/tsqlt/tSQLt.class.sql'
-
-
-      - name: run a query
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "exec testFinancialApp.[test that Report gets sales data with converted currency]"
-
-      - name: run a query2
+      - name: run the tests
         run: |
           sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC tSQLt.Run 'testFinancialApp';"
-
-      - name: run a query3
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "sp_helptext '[tSQLt].[Run]';"          
