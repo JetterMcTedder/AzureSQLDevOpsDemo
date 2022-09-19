@@ -41,15 +41,11 @@ jobs:
           done
           set -o pipefail -e
 
-      - name: create an empty DB
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "create database test123;"
-          sleep 10
 
       - uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          path: './Tests/tsqlt/databasesetup.sql' # the sql script to create db and configure for clr
+          path: './Tests/tsqlt/setupDatabase.sql' # the sql script to create db and configure for clr
 
       - uses: azure/sql-action@v1.3
         with:
