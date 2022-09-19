@@ -27,6 +27,6 @@
     </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
-    <PreDeploy Include="tsqlt\setupDatabase.sql" />
+    <PreDeploy Include="tsqlt\configureDatabase.sql" />
   </ItemGroup>
 </Project>
