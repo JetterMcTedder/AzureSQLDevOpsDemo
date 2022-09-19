@@ -16,7 +16,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Build Remove="tsqlt\demoExec.sql" />
+    <Build Remove="myTests\demoExec.sql" />
+    <Build Remove="myTests\demoExecAzureSQL.sql" />    
     <Build Remove="setups\setupDatabase.sql" />    
   </ItemGroup>
   <ItemGroup>
@@ -26,8 +27,5 @@
     <ArtifactReference Include="tsqlt\tSQLt.AzureSQL.dacpac">
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
     </ArtifactReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PreDeploy Include="tsqlt\configureDatabase.sql" />
   </ItemGroup>
 </Project>
