@@ -17,6 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Remove="tsqlt\demoExec.sql" />
+    <Build Remove="setups\setupDatabase.sql" />    
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="myTests\demoTest.sql" />
