@@ -47,7 +47,7 @@ jobs:
           connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           path: './Tests/tsqlt/setupDatabase.sql' # the sql script to create db and configure for clr
 
-      - uses: azure/sql-action@v1.3
+      - uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           path: './Tests/Tests.sqlproj' # the SQLproj file
