@@ -46,7 +46,7 @@ jobs:
         uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          path: './Tests/setups/setupDatabase.sql' # the sql script to create db and configure for clr
+          path: './setups/setupDatabase.sql' # the sql script to create db and configure for clr
 
       - name: 'Deploy Projects'
         uses: azure/sql-action@v2
@@ -60,4 +60,4 @@ jobs:
         uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          path: './Tests/tsqlt/demoExec.sql' # the tsqlt test command
+          path: './Tests/myTests/demoExec.sql' # the tsqlt test command
