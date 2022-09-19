@@ -10,10 +10,24 @@ Using the tsql tutorial
 
 https://tsqlt.org/user-guide/tsqlt-tutorial/
 
+#### Prerequisites
 
-## Project Contents
+githib
+ADS
+docker
 
-The project consists of two Database Projects (.sqlproj), a dacpac with tSQLt installed, a GitHub Actions workflow and some supporting files for database setup/creation and running the tSQLt tests.
+
+### Getting Started with Database Change Management and Azure Data Studio
+
+how to do it
+
+Sample scenario with tSQLt example
+
+
+
+## Example Repository Contents
+
+The repository consists of two Database Projects (.sqlproj), a dacpac with tSQLt installed, a GitHub Actions workflow and some supporting files for database setup/creation and running the tSQLt tests.
 
 ### The Code Project
 
