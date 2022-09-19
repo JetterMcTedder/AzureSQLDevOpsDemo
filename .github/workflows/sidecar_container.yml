@@ -46,27 +46,19 @@ jobs:
           sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "create database test123;"
           sleep 10
 
-      - name: Avengers Assemble
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d master -Q "EXEC sp_configure 'show advanced option', '1'; RECONFIGURE; EXEC sp_configure 'clr strict security', 0; RECONFIGURE; EXEC sp_configure 'clr enabled', 1; RECONFIGURE;"
-
-      # deploy the sql project
-      - uses: azure/sql-action@v1.3
+      - uses: azure/sql-action@v2
         with:
-          connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          project-file: './Code/Code.sqlproj' # the SQLproj file
+          connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          path: './tsqlt/databasesetup.sql' # the sql script to create db and configure for clr
 
       - uses: azure/sql-action@v1.3
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          project-file: './Tests/Tests.sqlproj' # the SQLproj file
-          dacpac-package: './Tests/tsqlt/tSQLt.AzureSQL.dacpac'
+          path: './Tests/Tests.sqlproj' # the SQLproj file
+          action: 'Publish'
+          arguments: '/p:IncludeCompositeObjects=True'
 
-      - uses: azure/sql-action@v1.3
+      - uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          project-file: './Tests/Tests.sqlproj' # the SQLproj file
-
-      - name: run the tests
-        run: |
-          sqlcmd -S localhost -U sa -P P@ssw0rd -d test123 -Q "EXEC tSQLt.Run 'testFinancialApp';"
+          path: './tsqlt/demoExec.sql' # the tsqlt test command
