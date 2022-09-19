@@ -39,7 +39,7 @@ It is separated out into object type folders in the FinancialApp schema.
 
 ### The Test Project
 
-The Test project contains the dacpac with tSQLt installed as well as the tSQLt tests (in the demoTest.sql file)
+The Test project contains the dacpac with tSQLt installed as well as the tSQLt tests (in the demoTest.sql file). It also has a reference to the Code project so that with a single publish, both projects with be deployed into a new database.
 
 ![The Code Project](./images/testProject.png)
 
