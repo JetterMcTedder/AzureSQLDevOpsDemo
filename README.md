@@ -1,4 +1,4 @@
-# AzureSQLDevOpsDemo
+# Azure SQL DevOps Demo
 
 Something insightful
 
