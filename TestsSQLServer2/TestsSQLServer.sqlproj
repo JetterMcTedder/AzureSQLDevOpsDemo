@@ -25,7 +25,7 @@
     <PostDeploy Include="myTests\demoTest.sql" />
   </ItemGroup>
   <ItemGroup>
-    <ArtifactReference Include="tsqlt\tSQLt.2019.dacpac">
+    <ArtifactReference Include="tsqlt\tsqlt.dacpac">
       <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
     </ArtifactReference>
   </ItemGroup>
