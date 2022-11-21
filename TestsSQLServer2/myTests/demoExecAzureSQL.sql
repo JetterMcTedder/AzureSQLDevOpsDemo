@@ -1,1 +1,0 @@
-EXEC tSQLt.Run 'testFinancialApp';
