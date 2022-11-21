@@ -52,7 +52,7 @@ jobs:
         uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          path: './Tests/Tests.sqlproj' # the SQLproj file
+          path: './TestsSQLServer/TestsSQLServer.sqlproj' # the SQLproj file
           action: 'Publish'
           arguments: '/p:IncludeCompositeObjects=True'
 
@@ -60,4 +60,4 @@ jobs:
         uses: azure/sql-action@v2
         with:
           connection-string: "Server=localhost;Initial Catalog=test123;User ID=sa;Password=P@ssw0rd;"  # the local connection string
-          path: './Tests/myTests/demoExec.sql' # the tsqlt test command
+          path: './TestsSQLServer/myTests/demoExecAzureSQL.sql' # the tsqlt test command
