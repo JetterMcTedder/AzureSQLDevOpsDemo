@@ -20,6 +20,7 @@
     <Build Remove="myTests\demoExecAzureSQL.sql" />
     <Build Remove="setups\setupDatabase.sql" />
     <Build Remove="tsqlt\PrepareServer.sql" />
+    <Build Remove="myTests\runDemoTests_VSC-ADS.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="myTests\demoTest.sql" />
