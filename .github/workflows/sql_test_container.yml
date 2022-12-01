@@ -45,16 +45,16 @@ jobs:
       - name: 'Create and setup database'
         uses: azure/sql-action@v2
         with:
-          connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          connection-string: "Server=localhost;Initial Catalog=master;User ID=sa;Password=P@ssw0rd;Encrypt=True;TrustServerCertificate=False;"  # the local connection string
           path: './setups/setupDatabase.sql' # the sql script to create db and configure for clr
 
       - name: 'Deploy Projects'
         uses: azure/sql-action@v2
         with:
-          connection-string: "Server=localhost;Initial Catalog=testingDB;User ID=sa;Password=P@ssw0rd;"  # the local connection string
+          connection-string: "Server=localhost;Initial Catalog=testingDB;User ID=sa;Password=P@ssw0rd;Encrypt=True;TrustServerCertificate=False;"  # the local connection string
           path: './TestsSQLServer/TestsSQLServer.sqlproj' # the SQLproj file
           action: 'Publish'
-          arguments: '/p:IncludeCompositeObjects=True /p:TargetTrustServerCertificate:True'
+          arguments: '/p:IncludeCompositeObjects=True'
 
       - name: 'Run tSQLt tests'
         uses: azure/sql-action@v2
