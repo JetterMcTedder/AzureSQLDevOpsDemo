@@ -54,7 +54,7 @@ jobs:
           connection-string: "Server=localhost;Initial Catalog=testingDB;User ID=sa;Password=P@ssw0rd;"  # the local connection string
           path: './TestsSQLServer/TestsSQLServer.sqlproj' # the SQLproj file
           action: 'Publish'
-          arguments: '/p:IncludeCompositeObjects=True'
+          arguments: '/p:IncludeCompositeObjects=True /p:TargetEncryptConnection:False'
 
       - name: 'Run tSQLt tests'
         uses: azure/sql-action@v2
