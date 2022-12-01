@@ -1,4 +1,4 @@
-name: SQL container in pipeline
+name: SQL Server container in tSQLt testing pipeline
 on:
   # push:
   #   branches:
