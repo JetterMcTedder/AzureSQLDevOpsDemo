@@ -1,7 +1,7 @@
 # Connecting the Dots of Azure SQL CICD Part 3: Testing with tSQLt
 
 
-#### Prerequisites
+### Prerequisites
 
 Refer to [part 1](https://devblogs.microsoft.com/azure-sql/connecting-the-dots-of-azure-sql-cicd-part-1-getting-started/) and [part 2](https://devblogs.microsoft.com/azure-sql/azure-sql-database-change-management/) for the prerequisites.
 
