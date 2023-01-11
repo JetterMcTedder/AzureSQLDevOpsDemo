@@ -3,7 +3,7 @@
 
 ### Prerequisites
 
-Refer to [part 1](https://devblogs.microsoft.com/azure-sql/connecting-the-dots-of-azure-sql-cicd-part-1-getting-started/), [part 2](https://devblogs.microsoft.com/azure-sql/azure-sql-database-change-management/), and [part 3](https://devblogs.microsoft.com/azure-sql/connecting-the-dots-of-azure-sql-cicd-part-3-testing-with-tsqlt/) for the prerequisites.
+Refer to [part 1](https://devblogs.microsoft.com/azure-sql/connecting-the-dots-of-azure-sql-cicd-part-1-getting-started/), [part 2](https://devblogs.microsoft.com/azure-sql/azure-sql-database-change-management/) for the prerequisites.
 
 * [git](https://learn.microsoft.com/en-us/devops/develop/git/install-and-set-up-git)
 * A [GitHub](https://github.com/) account
